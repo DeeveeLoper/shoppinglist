@@ -1,4 +1,6 @@
-﻿class Shoppinglist
+﻿using System.Net;
+
+class Shoppinglist
 {
     static void Main(string[] args)
     {   // menu
@@ -56,5 +58,13 @@
         }
         Console.WriteLine($"Artikeln {searcheArticle} du söker har hittats.");
 
+        // Avsluta prorgam
+        Console.WriteLine("Vill du avsluta?");
+        string quitProgram = Console.ReadLine();
+        if (quitProgram == "5")
+        {
+            Console.WriteLine("Programmet avslutas!");
+            Environment.Exit(0);
+        }
     }
 }
