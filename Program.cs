@@ -23,7 +23,7 @@
             Console.WriteLine(articel);
         }
 
-        //Lägg till en artikel
+        //Lägg till en artikel genom att använda Add
         Console.Write("Lägg till en artikel: ");
         string newArticle = Console.ReadLine();
         shoppingList.Add(newArticle);
@@ -33,11 +33,11 @@
         }
         Console.WriteLine($"Artikeln {newArticle} har lagts till.");
 
-        // Ta bort en artikel
+        // Ta bort en artikel genom att använda RemoveAt
         Console.Write("Ta bort artikel: ");
         var removeArticle = Console.ReadLine();
-
-        shoppingList.Remove(removeArticle);
+        int removeIndex = shoppingList.IndexOf(removeArticle);
+        shoppingList.RemoveAt(removeIndex);
 
         foreach (var articel in shoppingList)
         {
@@ -45,7 +45,16 @@
         }
         Console.WriteLine($"Artikeln {removeArticle} har tagits bort");
 
+        // Sök efter en artikel genom att använda Contains
+        Console.Write("Sök efter en artikel: ");
+        string searcheArticle = Console.ReadLine();
 
+        shoppingList.Contains(searcheArticle);
+        foreach (var articel in shoppingList)
+        {
+            Console.WriteLine(articel);
+        }
+        Console.WriteLine($"Artikeln {searcheArticle} du söker har hittats.");
 
     }
 }
