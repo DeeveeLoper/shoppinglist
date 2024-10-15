@@ -9,7 +9,7 @@
         Console.WriteLine("4. - Sök efter artikel");
         Console.WriteLine("5. - Avsluta");
 
-        // Visar alla produkter i shoppinglistan
+        // Visar alla artiklar i shoppinglistan
         Console.WriteLine("Se hela Shoppinglistan:");
         List<string> shoppingList = new List<string>();
 
@@ -17,20 +17,33 @@
         shoppingList.Add("Motorsåg");
         shoppingList.Add("Trollstav");
 
-        Console.WriteLine("Visa alla Produkter");
-        foreach (string product in shoppingList)
+        Console.WriteLine("Visa alla artiklar");
+        foreach (string articel in shoppingList)
         {
-            Console.WriteLine(product);
+            Console.WriteLine(articel);
         }
 
         //Lägg till en artikel
-        Console.WriteLine("Lägg till en artikel:");
-        string newProduct = Console.ReadLine();
-        shoppingList.Add(newProduct);
-        foreach (string product in shoppingList)
+        Console.Write("Lägg till en artikel: ");
+        string newArticle = Console.ReadLine();
+        shoppingList.Add(newArticle);
+        foreach (string articel in shoppingList)
         {
-            Console.WriteLine(product);
+            Console.WriteLine(articel);
         }
+        Console.WriteLine($"Artikeln {newArticle} har lagts till.");
+
+        // Ta bort en artikel
+        Console.Write("Ta bort artikel: ");
+        var removeArticle = Console.ReadLine();
+
+        shoppingList.Remove(removeArticle);
+
+        foreach (var articel in shoppingList)
+        {
+            Console.WriteLine(articel);
+        }
+        Console.WriteLine($"Artikeln {removeArticle} har tagits bort");
 
 
 
