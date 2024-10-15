@@ -9,7 +9,7 @@
         Console.WriteLine("4. - Sök efter artikel");
         Console.WriteLine("5. - Avsluta");
 
-        // Se alla produkter i shoppinglistan
+        // Visar alla produkter i shoppinglistan
         Console.WriteLine("Se hela Shoppinglistan:");
         List<string> shoppingList = new List<string>();
 
@@ -22,6 +22,17 @@
         {
             Console.WriteLine(product);
         }
+
+        //Lägg till en artikel
+        Console.WriteLine("Lägg till en artikel:");
+        string newProduct = Console.ReadLine();
+        shoppingList.Add(newProduct);
+        foreach (string product in shoppingList)
+        {
+            Console.WriteLine(product);
+        }
+
+
 
     }
 }
