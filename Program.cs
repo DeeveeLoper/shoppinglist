@@ -3,7 +3,7 @@
 class Shoppinglist
 {
     static void Main(string[] args)
-    {   // menu
+    {   // Meny
         Console.WriteLine("=== SHOPPINGLISTA ===");
         Console.WriteLine("1. - Visa hela listan");
         Console.WriteLine("2. - Lägg till en artikel");
